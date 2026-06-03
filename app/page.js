@@ -19,6 +19,7 @@ export default function Home() {
 --border:#d1d1d6;--radius:12px;
 }
 html,body{height:100%;font-family:-apple-system,BlinkMacSystemFont,'SF Pro Text','SF Pro Display','Helvetica Neue',sans-serif;background:var(--bg);color:var(--text);font-size:15px;line-height:1.5;overflow:hidden;-webkit-font-smoothing:antialiased}
+@media(min-height:900px){nav{position:fixed;bottom:0;left:0;right:0;max-width:600px;margin:0 auto}.tab-content{padding-bottom:70px}}
 
 /* ===== RADIO TAB HACK ===== */
 input[name="tab"]{display:none}
