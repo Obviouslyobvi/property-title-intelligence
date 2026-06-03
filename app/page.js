@@ -43,7 +43,8 @@ header h1{font-size:18px;color:var(--text);letter-spacing:2px;font-weight:700;te
 /* Nav label styling */
 nav{display:flex;background:var(--bg);border-top:2px solid var(--text);padding:0 0 env(safe-area-inset-bottom,4px)}
 nav label{flex:1;background:none;border:none;color:var(--text3);font-size:11px;padding:12px 4px 8px;display:flex;flex-direction:column;align-items:center;gap:0;cursor:pointer;transition:color .15s;text-align:center;-webkit-tap-highlight-color:transparent;user-select:none;font-weight:600;letter-spacing:0.8px;text-transform:uppercase;border-top:3px solid transparent;margin-top:-2px}
-nav label .icon{display:none}
+nav label .icon{display:block;height:20px}
+nav label .icon svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
 
 /* Active tab nav highlighting */
 #tab1:checked ~ .app-wrap nav label[for="tab1"]{color:var(--text);border-top-color:var(--accent)}
@@ -134,6 +135,8 @@ details .card-body{padding:0 0 20px 36px}
 .strat-card[open] > summary .arrow{transform:rotate(180deg)}
 .strat-card[open] > summary{padding-bottom:8px}
 .strat-body{padding:0 0 16px}
+.strat-icon{display:inline-block;width:18px;height:18px;vertical-align:-3px;margin-right:6px}
+.strat-icon svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
 .strat-body .meta{font-size:11px;color:var(--accent);margin-bottom:4px;font-weight:700;text-transform:uppercase;letter-spacing:1px}
 .strat-body .meta b{color:var(--accent)}
 .strat-body p{font-size:14px;color:var(--text2);margin-bottom:14px;line-height:1.6}
@@ -624,7 +627,7 @@ details .card-body{padding:0 0 20px 36px}
 <h3 class="section-title" style="margin-top:0">Distress Signals</h3>
 
 <details class="strat-card">
-<summary><h4>&#128176; Financial Distress</h4><span class="arrow">&#9660;</span></summary>
+<summary><h4><span class="strat-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></span>Financial Distress</h4><span class="arrow">&#9660;</span></summary>
 <div class="strat-body">
 <div class="meta"><b>The Human Story</b></div>
 <p>Job loss, medical bills, business failure, or simply living beyond means. The owner is drowning in payments and every month that passes makes it worse.</p>
@@ -636,7 +639,7 @@ details .card-body{padding:0 0 20px 36px}
 </details>
 
 <details class="strat-card">
-<summary><h4>&#127973; Health Crisis</h4><span class="arrow">&#9660;</span></summary>
+<summary><h4><span class="strat-icon"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 000-7.78z"/></svg></span>Health Crisis</h4><span class="arrow">&#9660;</span></summary>
 <div class="strat-body">
 <div class="meta"><b>The Human Story</b></div>
 <p>Owner or spouse facing serious illness, disability, or aging into needing assisted living. The property has become a burden they can't maintain.</p>
@@ -648,7 +651,7 @@ details .card-body{padding:0 0 20px 36px}
 </details>
 
 <details class="strat-card">
-<summary><h4>&#128148; Relationship Breakdown</h4><span class="arrow">&#9660;</span></summary>
+<summary><h4><span class="strat-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></span>Relationship Breakdown</h4><span class="arrow">&#9660;</span></summary>
 <div class="strat-body">
 <div class="meta"><b>The Human Story</b></div>
 <p>Divorce, separation, or family dispute. Neither party wants the property but both want their share. The house represents the pain they want to leave behind.</p>
@@ -660,7 +663,7 @@ details .card-body{padding:0 0 20px 36px}
 </details>
 
 <details class="strat-card">
-<summary><h4>&#128188; Job Loss / Relocation</h4><span class="arrow">&#9660;</span></summary>
+<summary><h4><span class="strat-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/></svg></span>Job Loss / Relocation</h4><span class="arrow">&#9660;</span></summary>
 <div class="strat-body">
 <div class="meta"><b>The Human Story</b></div>
 <p>Transferred for work, found a new job in another city, or retired and moving. Carrying two mortgages or an empty house far away.</p>
@@ -672,7 +675,7 @@ details .card-body{padding:0 0 20px 36px}
 </details>
 
 <details class="strat-card">
-<summary><h4>&#128338; Bereavement</h4><span class="arrow">&#9660;</span></summary>
+<summary><h4><span class="strat-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>Bereavement</h4><span class="arrow">&#9660;</span></summary>
 <div class="strat-body">
 <div class="meta"><b>The Human Story</b></div>
 <p>Owner has passed away. Heirs may be overwhelmed, grieving, or scattered across the country. Nobody wants the responsibility of the inherited property.</p>
@@ -684,7 +687,7 @@ details .card-body{padding:0 0 20px 36px}
 </details>
 
 <details class="strat-card">
-<summary><h4>&#128555; General Overwhelm</h4><span class="arrow">&#9660;</span></summary>
+<summary><h4><span class="strat-icon"><svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg></span>General Overwhelm</h4><span class="arrow">&#9660;</span></summary>
 <div class="strat-body">
 <div class="meta"><b>The Human Story</b></div>
 <p>Accidental landlord, inherited a mess, or just burned out. The property has become an emotional and financial albatross they want off their plate.</p>
@@ -774,11 +777,11 @@ details .card-body{padding:0 0 20px 36px}
 </div><!-- end tab-content -->
 
 <nav>
-<label for="tab1"><span class="icon">&#128269;</span>Property Profile</label>
-<label for="tab2"><span class="icon">&#128218;</span>Glossary</label>
-<label for="tab3"><span class="icon">&#9888;&#65039;</span>Red Flags</label>
-<label for="tab4"><span class="icon">&#9813;</span>Strategy</label>
-<label for="tab5"><span class="icon">&#128295;</span>Tools</label>
+<label for="tab1"><span class="icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/><path d="M8 11h6M11 8v6" stroke-width="1"/></svg></span>Profile</label>
+<label for="tab2"><span class="icon"><svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/><line x1="9" y1="7" x2="16" y2="7"/><line x1="9" y1="11" x2="14" y2="11"/></svg></span>Glossary</label>
+<label for="tab3"><span class="icon"><svg viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><circle cx="12" cy="16" r="0.5" fill="currentColor"/></svg></span>Red Flags</label>
+<label for="tab4"><span class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2" fill="currentColor"/></svg></span>Strategy</label>
+<label for="tab5"><span class="icon"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></span>Tools</label>
 </nav>
 
 </div><!-- end app-wrap -->
