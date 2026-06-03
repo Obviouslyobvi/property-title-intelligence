@@ -8,7 +8,7 @@ export default function Home() {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>Property Title Intelligence System</title>
+<title>Property Analysis System</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
@@ -27,7 +27,7 @@ input[name="tab"]{display:none}
 input[name="subtab-flags"],input[name="subtab-strat"]{display:none}
 
 .app-wrap{display:flex;flex-direction:column;min-height:100%;max-width:620px;margin:0 auto}
-header{padding:24px 20px 16px;background:var(--bg);border-bottom:2px solid var(--text)}
+header{padding:24px 20px 16px;background:var(--bg);border-bottom:2px solid var(--text);text-align:center}
 header h1{font-size:18px;color:var(--text);letter-spacing:2px;font-weight:700;text-transform:uppercase}
 
 .tab-content{padding:24px 20px 24px;-webkit-overflow-scrolling:touch;background:var(--bg)}
@@ -220,7 +220,7 @@ details .card-body{padding:0 0 20px 36px}
 
 <div class="app-wrap">
 <header>
-<h1>Property Title Intelligence System</h1>
+<h1>Property Analysis System</h1>
 </header>
 
 <div class="tab-content">
@@ -789,7 +789,7 @@ details .card-body{padding:0 0 20px 36px}
 </body>
 </html>`}
       style={{width:'100%',height:'100vh',border:'none'}}
-      title='Property Title Intelligence System'
+      title='Property Analysis System'
     />
   )
 }
