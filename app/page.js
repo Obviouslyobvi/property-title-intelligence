@@ -18,19 +18,19 @@ export default function Home() {
 --green:#34c759;--yellow:#ffcc00;--orange:#ff9500;--red:#ff3b30;
 --border:#d1d1d6;--radius:12px;
 }
-html,body{height:100%;font-family:-apple-system,BlinkMacSystemFont,'SF Pro Text','SF Pro Display','Helvetica Neue',sans-serif;background:var(--bg);color:var(--text);font-size:15px;line-height:1.5;overflow:hidden;-webkit-font-smoothing:antialiased}
-@media(min-height:900px){nav{position:fixed;bottom:0;left:0;right:0;max-width:600px;margin:0 auto}.tab-content{padding-bottom:70px}}
+html{height:100%}
+body{min-height:100%;font-family:-apple-system,BlinkMacSystemFont,'SF Pro Text','SF Pro Display','Helvetica Neue',sans-serif;background:var(--bg);color:var(--text);font-size:15px;line-height:1.5;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 
 /* ===== RADIO TAB HACK ===== */
 input[name="tab"]{display:none}
 input[name="subtab-flags"],input[name="subtab-strat"]{display:none}
 
-.app-wrap{display:flex;flex-direction:column;height:100%;max-width:600px;margin:0 auto}
+.app-wrap{display:flex;flex-direction:column;min-height:100%;max-width:600px;margin:0 auto}
 header{padding:16px 16px 12px;background:var(--bg);text-align:center}
 header h1{font-size:20px;color:var(--text);letter-spacing:-0.3px;font-weight:700}
 header p{font-size:12px;color:var(--text3);margin-top:2px;font-weight:400}
 
-.tab-content{flex:1;overflow-y:auto;padding:16px 16px 20px;-webkit-overflow-scrolling:touch;background:var(--bg)}
+.tab-content{padding:16px 16px 20px;-webkit-overflow-scrolling:touch;background:var(--bg)}
 .tab-panel{display:none}
 
 /* Main tab switching */
