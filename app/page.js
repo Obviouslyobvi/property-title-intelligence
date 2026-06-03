@@ -12,12 +12,12 @@ export default function Home() {
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
---bg:#FFFFFF;--bg2:#FFFFFF;--bg3:#FAFAFA;--bg4:#F5F5F5;
---accent:#C0392B;--accent2:#96281B;--accent-dim:#E8C4C0;
---text:#000000;--text2:#333333;--text3:#888888;
---green:#1B8C4E;--yellow:#C49000;--orange:#C45A00;--red:#C0392B;
---border:#E0E0E0;--radius:2px;
---step:#000000;
+--bg:#1a2332;--bg2:#1e2a3a;--bg3:#243042;--bg4:#2a3850;
+--accent:#d4a843;--accent2:#e6bc5a;--accent-dim:#8a7030;
+--text:#e8e8e8;--text2:#a0aab4;--text3:#6a7a8a;
+--green:#4caf50;--yellow:#ffc107;--orange:#ff9800;--red:#ef5350;
+--border:#2a3a4a;--radius:2px;
+--step:#d4a843;
 }
 html{height:100%}
 body{min-height:100%;font-family:-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif;background:var(--bg);color:var(--text);font-size:15px;line-height:1.55;overflow-x:hidden;-webkit-font-smoothing:antialiased}
@@ -27,8 +27,8 @@ input[name="tab"]{display:none}
 input[name="subtab-flags"],input[name="subtab-strat"]{display:none}
 
 .app-wrap{display:flex;flex-direction:column;min-height:100%;max-width:620px;margin:0 auto}
-header{padding:24px 20px 16px;background:var(--bg);border-bottom:2px solid var(--text);text-align:center}
-header h1{font-size:18px;color:var(--text);letter-spacing:2px;font-weight:700;text-transform:uppercase}
+header{padding:24px 20px 16px;background:var(--bg2);border-bottom:1px solid var(--border);text-align:center}
+header h1{font-size:18px;color:var(--accent);letter-spacing:2px;font-weight:700;text-transform:uppercase}
 
 .tab-content{padding:24px 20px 24px;-webkit-overflow-scrolling:touch;background:var(--bg)}
 .tab-panel{display:none}
@@ -41,7 +41,7 @@ header h1{font-size:18px;color:var(--text);letter-spacing:2px;font-weight:700;te
 #tab5:checked ~ .app-wrap .tab-content #panel-tools{display:block}
 
 /* Nav label styling */
-nav{display:flex;background:var(--bg);border-top:2px solid var(--text);padding:0 0 env(safe-area-inset-bottom,4px)}
+nav{display:flex;background:var(--bg2);border-top:1px solid var(--border);padding:0 0 env(safe-area-inset-bottom,4px)}
 nav label{flex:1;background:none;border:none;color:var(--text3);font-size:11px;padding:12px 4px 8px;display:flex;flex-direction:column;align-items:center;gap:0;cursor:pointer;transition:color .15s;text-align:center;-webkit-tap-highlight-color:transparent;user-select:none;font-weight:600;letter-spacing:0.8px;text-transform:uppercase;border-top:3px solid transparent;margin-top:-2px}
 nav label .icon{display:block;height:20px}
 nav label .icon svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
@@ -56,18 +56,18 @@ nav label .icon svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-
 /* ===== INPUTS ===== */
 input[type="text"],input[type="tel"],input[type="email"],input[type="url"],textarea{
 width:100%;background:var(--bg);border:none;border-bottom:1px solid var(--border);color:var(--text);padding:8px 0;border-radius:0;font-size:15px;font-family:inherit;outline:none;transition:border-color .2s}
-input[type="text"]:focus,input[type="tel"]:focus,input[type="email"]:focus,input[type="url"]:focus,textarea:focus{border-bottom-color:var(--text)}
+input[type="text"]:focus,input[type="tel"]:focus,input[type="email"]:focus,input[type="url"]:focus,textarea:focus{border-bottom-color:var(--accent)}
 textarea{resize:vertical;min-height:60px;border:1px solid var(--border);padding:8px 10px}
-textarea:focus{border-color:var(--text)}
+textarea:focus{border-color:var(--accent)}
 .field-label{display:block;font-size:11px;color:var(--text3);margin-bottom:2px;font-weight:600;text-transform:uppercase;letter-spacing:1px}
 .field{margin-bottom:16px}
 
 /* ===== CHECKBOXES ===== */
-.check-item{display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:1px solid #F0F0F0}
+.check-item{display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:1px solid var(--border)}
 .check-item:last-child{border-bottom:none}
 .check-item input[type="checkbox"]{display:none}
-.check-item .check-box{width:16px;height:16px;min-width:16px;border:1.5px solid #CCCCCC;border-radius:1px;display:flex;align-items:center;justify-content:center;margin-top:2px;cursor:pointer;transition:all .15s;background:transparent}
-.check-item input[type="checkbox"]:checked + .check-box{background:var(--text);border-color:var(--text)}
+.check-item .check-box{width:16px;height:16px;min-width:16px;border:1.5px solid var(--text3);border-radius:1px;display:flex;align-items:center;justify-content:center;margin-top:2px;cursor:pointer;transition:all .15s;background:transparent}
+.check-item input[type="checkbox"]:checked + .check-box{background:var(--accent);border-color:var(--accent)}
 .check-item input[type="checkbox"]:checked + .check-box::after{content:"";display:block;width:4px;height:8px;border:solid #fff;border-width:0 1.5px 1.5px 0;transform:rotate(45deg);margin-top:-2px}
 .check-item .check-text{font-size:14px;line-height:1.5;cursor:pointer;color:var(--text2)}
 .check-item input[type="checkbox"]:checked ~ .check-text{color:var(--text3);text-decoration:line-through}
@@ -85,7 +85,7 @@ details[open] > summary{padding-bottom:10px}
 details .card-body{padding:0 0 20px 36px}
 
 /* Step number badges */
-.step-num{background:var(--text);color:#fff;width:22px;height:22px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0}
+.step-num{background:var(--accent);color:var(--bg);width:22px;height:22px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0}
 
 /* ===== SECTION HEADERS ===== */
 .section-title{font-size:13px;color:var(--text);margin:28px 0 14px;padding-bottom:0;border-bottom:none;font-weight:700;letter-spacing:1.5px;text-transform:uppercase}
@@ -110,11 +110,13 @@ details .card-body{padding:0 0 20px 36px}
 .sev-moderate{background:transparent;color:var(--yellow);border:1px solid var(--yellow)}
 .sev-severe{background:transparent;color:var(--orange);border:1px solid var(--orange)}
 .sev-critical{background:var(--red);color:#fff;border:1px solid var(--red)}
+.tool-item h4 .badge{font-size:9px;padding:2px 6px;border-radius:1px;background:transparent;color:var(--green);font-weight:700;text-transform:uppercase;letter-spacing:0.5px;border:1px solid var(--green)}
+.tool-item h4 .badge.paid{color:var(--text3);border-color:var(--text3)}
 
 /* ===== MATRIX TABLE ===== */
 .matrix{width:100%;border-collapse:collapse;margin-bottom:16px}
-.matrix th{text-align:left;font-size:10px;color:var(--text3);padding:8px 8px 8px 0;border-bottom:2px solid var(--text);font-weight:700;text-transform:uppercase;letter-spacing:0.8px}
-.matrix td{font-size:13px;padding:10px 8px 10px 0;border-bottom:1px solid #F0F0F0;vertical-align:middle;color:var(--text2)}
+.matrix th{text-align:left;font-size:10px;color:var(--text3);padding:8px 8px 8px 0;border-bottom:1px solid var(--accent);font-weight:700;text-transform:uppercase;letter-spacing:0.8px}
+.matrix td{font-size:13px;padding:10px 8px 10px 0;border-bottom:1px solid var(--border);vertical-align:middle;color:var(--text2)}
 .matrix tr:last-child td{border-bottom:none}
 
 /* ===== RED FLAG PATTERNS ===== */
@@ -156,7 +158,7 @@ details .card-body{padding:0 0 20px 36px}
 .tool-item h4 .badge{font-size:9px;padding:2px 6px;border-radius:1px;background:transparent;color:var(--green);font-weight:700;text-transform:uppercase;letter-spacing:0.5px;border:1px solid var(--green)}
 .tool-item h4 .badge.paid{color:var(--text3);border-color:var(--text3)}
 .tool-item p{font-size:13px;color:var(--text2);line-height:1.55}
-.tool-item a{color:var(--text);font-size:13px;text-decoration:underline;display:inline-block;margin-top:6px;font-weight:400}
+.tool-item a{color:var(--accent);font-size:13px;text-decoration:underline;display:inline-block;margin-top:6px;font-weight:400}
 
 /* ===== SUB-TAB HACK (Red Flags) ===== */
 .sub-panel-flags{display:none}
@@ -164,7 +166,7 @@ details .card-body{padding:0 0 20px 36px}
 #subtab-flags-matrix:checked ~ .app-wrap .tab-content #panel-flags .sub-panel-flags.sp-matrix{display:block}
 #subtab-flags-patterns:checked ~ .app-wrap .tab-content #panel-flags .sub-panel-flags.sp-patterns{display:block}
 
-.sub-tabs{display:flex;gap:0;margin-bottom:20px;border-bottom:2px solid var(--text)}
+.sub-tabs{display:flex;gap:0;margin-bottom:20px;border-bottom:1px solid var(--border)}
 .sub-tabs label{flex:1;padding:10px 12px;font-size:11px;font-weight:600;background:transparent;color:var(--text3);border:none;border-bottom:3px solid transparent;cursor:pointer;white-space:nowrap;transition:all .15s;-webkit-tap-highlight-color:transparent;user-select:none;text-align:center;text-transform:uppercase;letter-spacing:0.8px;margin-bottom:-2px}
 
 #subtab-flags-checklist:checked ~ .app-wrap .tab-content #panel-flags .sub-tabs label[for="subtab-flags-checklist"]{color:var(--text);border-bottom-color:var(--accent)}
